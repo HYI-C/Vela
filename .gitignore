@@ -1,0 +1,3 @@
+Data/train.csv 
+Data/*
+!Data/config_data.py
