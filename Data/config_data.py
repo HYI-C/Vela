@@ -31,10 +31,23 @@ class ConfigData:
 
     def run(self):
         df = pd.read_csv(self.data_path)
-        df = df = df.drop(["uuid", "uuid_1"], axis=1)
+        df = df.drop(["uuid", "uuid_1"], axis=1)
         for i in range(0, len(df)): #len(df)
-            desc = df[i:i+1]['description'].values[0].astype(str)
+            desc = str(df[i:i+1]['description'].values[0])
             name = df[i:i+1]['name'].values[0]
             trimmed_desc = self._trim_description(desc)
             self._build_dict(name, trimmed_desc)
+        return self.data
+
+    def run_small(self):
+        '''Here, we only select the subgroup of IT companies, on short desc.'''
+        df = pd.read_csv(self.data_path)
+        df = df.drop(["uuid", "uuid_1"], axis=1)
+        for i in range(0, len(df)):
+            IT = str(df[i:i+1]["category_groups_list"].values[0]).split()
+            if "Information" in IT:
+                desc = str(df[i:i+1]['short_description'].values[0])
+                name = df[i:i+1]['name'].values[0]
+                trimmed_desc = self._trim_description(desc)
+                self._build_dict(name, trimmed_desc)
         return self.data

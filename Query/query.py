@@ -20,8 +20,6 @@ class Query:
     def _similarity(self, emb_query):
         '''This returns the similarity of each item in the universe'''
         similarity = util.pytorch_cos_sim(emb_query, self.emb_univ) 
-        print(len(similarity[0]))
-        print(len(self.emb_univ))
         return similarity
     
     def _embed(self, item):
@@ -34,7 +32,6 @@ class Query:
         '''this function takes in the image data and returns the bins along with
         the index of the bin where each point belongs'''
         res_inds = np.array([])
-        print(self.top_n)
         sim_set = set(similarity[0])
         for _ in range(0, self.top_n): #we need to put a threshold in here
             #print(max(sim_set))
