@@ -1,8 +1,8 @@
 import torch
 import numpy as np
 import math
-from sentence_transformers import SentenceTransformer
 from sentence_transformers import SentenceTransformer, util
+from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
 from Settings.settings import *
 
 class Model:
@@ -28,4 +28,6 @@ class Model:
         self._construct_sentences()
         embed_univ = self._construct_embedding(self.sentences) #this is our entire dictionary embedded
         return embed_univ
+    
+    def evaluate(self):
         

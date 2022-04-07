@@ -51,3 +51,13 @@ class ConfigData:
                 trimmed_desc = self._trim_description(desc)
                 self._build_dict(name, trimmed_desc)
         return self.data
+
+    def run_test(self):
+        df = pd.read_csv(self.data_path)
+        df = df.drop(["uuid", "uuid_1"], axis=1)
+        for i in range(0, 1000): #we run on the first 10k rows
+            desc = str(df[i:i+1]['description'].values[0])
+            name = df[i:i+1]['name'].values[0]
+            trimmed_desc = self._trim_description(desc)
+            self._build_dict(name, trimmed_desc)
+        return self.data
