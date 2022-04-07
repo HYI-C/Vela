@@ -39,17 +39,17 @@ class Query:
         '''this function takes in the image data and returns the bins along with
         the index of the bin where each point belongs'''
         res_inds = np.array([])
+        max_scores = np.array([])
         sim_set = set(similarity[0])
         for _ in range(0, self.top_n): #we need to put a threshold in here
-            #print(max(sim_set))
             if max(sim_set) != 0:
-            #print(max(sim_set))
                 idx = np.where(similarity[0] == max(sim_set))
                 res_inds = np.append(res_inds, idx[0]).astype(int)
+                max_scores = np.append(max_scores, max(sim_set))
                 sim_set.remove(max(sim_set))
             else:
                 break
-        return res_inds
+        return res_inds, max_scores
     
     def _return_top_n(self, res_inds):
         '''Here, we return the top n companies'''
@@ -62,11 +62,11 @@ class Query:
     def run(self, description):
         emb_query = self._embed(description)
         similarity = self._similarity(emb_query)
-        res_inds = self._find_top_n_inds(similarity)
+        res_inds, max_scores = self._find_top_n_inds(similarity)
         sim_companies = self._return_top_n(res_inds)
         if self.evaluate:
             #Find the number of "good scores"
-            check = np.where(similarity > self.eval_threshold)
+            check = np.where(max_scores > self.eval_threshold)
             num_good = len(check[0])
             #This is to check against different sentences
             evaluator = EmbeddingSimilarityEvaluator(self.sentences1, self.sentences2, self.scores, write_csv= True)

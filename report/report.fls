@@ -1,8 +1,8 @@
-PWD /Users/ian/Vela/report
+PWD /Users/ian/Documents/GitHub/Vela/report
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/ian/Vela/report/report.tex
+INPUT /Users/ian/Documents/GitHub/Vela/report/report.tex
 OUTPUT report.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -750,6 +750,11 @@ INPUT uml.jpeg
 INPUT ./uml.jpeg
 INPUT ./uml.jpeg
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT ./training.jpeg
+INPUT ./training.jpeg
+INPUT training.jpeg
+INPUT ./training.jpeg
+INPUT ./training.jpeg
 INPUT /usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT report.aux
 INPUT ./report.out

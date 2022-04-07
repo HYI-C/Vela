@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  6 APR 2022 18:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  7 APR 2022 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/ian/Vela/report/report.tex
-(/Users/ian/Vela/report/report.tex
+**/Users/ian/Documents/GitHub/Vela/report/report.tex
+(/Users/ian/Documents/GitHub/Vela/report/report.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -321,7 +321,11 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 30.
- (./report.aux)
+ (./report.aux
+
+LaTeX Warning: Label `setup' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -440,8 +444,13 @@ File: uml.jpeg Graphic file (type jpg)
 Package pdftex.def Info: uml.jpeg  used on input line 47.
 (pdftex.def)             Requested size: 270.30118pt x 290.58142pt.
 
-LaTeX Warning: Reference `uml' on page 1 undefined on input line 47.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<training.jpeg, id=30, 139.9629pt x 213.9192pt>
+File: training.jpeg Graphic file (type jpg)
+<use training.jpeg>
+Package pdftex.def Info: training.jpeg  used on input line 53.
+(pdftex.def)             Requested size: 270.30118pt x 413.20093pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -451,27 +460,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  <./uml.jpeg>] [2
 
+ <./training.jpeg>] [3
+
 
 ] (./report.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: A99E5E4939396D4BDB48FF04C959884F;544.
  ) 
 Here is how much of TeX's memory you used:
- 15784 strings out of 478268
- 291421 string characters out of 5846348
- 738059 words of memory out of 5000000
- 33800 multiletter control sequences out of 15000+600000
+ 15792 strings out of 478268
+ 291602 string characters out of 5846348
+ 739059 words of memory out of 5000000
+ 33805 multiletter control sequences out of 15000+600000
  477169 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,79p,355b,752s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,8n,79p,372b,752s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (2 pages, 157573 bytes).
+Output written on report.pdf (3 pages, 218944 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
