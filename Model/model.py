@@ -28,6 +28,3 @@ class Model:
         self._construct_sentences()
         embed_univ = self._construct_embedding(self.sentences) #this is our entire dictionary embedded
         return embed_univ
-    
-    def evaluate(self):
-        

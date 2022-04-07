@@ -31,6 +31,8 @@ class TrainModel:
         train_examples = [InputExample(texts=["sentence1", "sentence2"], label=0.8), InputExample(texts=["unlike sentence 1", "unlike sentence 2"], label=0.2)]
         train_dataloader = DataLoader(train_examples, batch_size = ms.batch_size)
         train_loss = losses.CosineSimilarityLoss(self.model)
-    
+        return train_dataloader, train_loss
+        
     def train(self, epochs):
+        train_dataloader, train_loss = self._configure_data()
         self.model.fit(train_objectives=[(train_dataloader, train_loss)], epochs = epochs)

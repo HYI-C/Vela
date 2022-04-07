@@ -12,6 +12,8 @@ class Query:
         ms = Settings()
         ms.configure()
         self.top_n = ms.top_n
+        self.eval_threshold = ms.eval_threshold
+        self.log_performance = ms.log_performance
         self.emb_univ = embed_univ
         self.data = data
         self.model = SentenceTransformer(ms.model_name)
@@ -57,4 +59,10 @@ class Query:
         similarity = self._similarity(emb_query)
         res_inds = self._find_top_n_inds(similarity)
         sim_companies = self._return_top_n(res_inds)
-        return sim_companies
+        if self.log_performance:
+            '''Find the number of results that are above 0.6 for each 15?'''
+            check = np.where(similarity > self.eval_threshold)
+            num_good = len(check[0])
+            return sim_companies, num_good
+        else:
+            return sim_companies

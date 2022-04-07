@@ -1,3 +1,5 @@
+from torch import nn
+
 #Data
 data_path = 'data/train.csv'
 
