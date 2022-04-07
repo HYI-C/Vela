@@ -6,15 +6,18 @@ import math
 from sentence_transformers import SentenceTransformer, models, InputExample, losses
 from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
 from transformers import InputExample
+
 from Settings.settings import *
 
 class TrainModel:
     def __init__(
-        self,
-        
+        self,        
     ):
         ms = Settings()
         ms.configure()
+        self.sentences1 = ms.sentences1
+        self.sentences2 = ms.sentences2
+        self.scores = ms.scores
 
     def _configure_model(self):
         '''The architecture of this model is a pooling layer on top of the fully connected layer 
@@ -36,3 +39,8 @@ class TrainModel:
     def train(self, epochs):
         train_dataloader, train_loss = self._configure_data()
         self.model.fit(train_objectives=[(train_dataloader, train_loss)], epochs = epochs)
+        
+        evaluator = EmbeddingSimilarityEvaluator(self.sentences1, self.sentences2, self.scores, write_csv= True)
+        score = evaluator(self.model)
+
+        return

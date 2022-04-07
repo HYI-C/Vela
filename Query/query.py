@@ -1,6 +1,7 @@
 import torch
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
+from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
 from Settings.settings import *
 
 class Query:
@@ -8,14 +9,18 @@ class Query:
         self,
         embed_univ, # representation of the universe
         data, # the actual universe, name is in index 0, desc is index 1
+        evaluate = True,
     ):
         ms = Settings()
         ms.configure()
         self.top_n = ms.top_n
         self.eval_threshold = ms.eval_threshold
-        self.log_performance = ms.log_performance
+        self.sentences1 = ms.sentences1
+        self.sentences2 = ms.sentences2
+        self.scores = ms.scores
         self.emb_univ = embed_univ
         self.data = data
+        self.evaluate = evaluate
         self.model = SentenceTransformer(ms.model_name)
         self.sentences = []
 
@@ -59,10 +64,13 @@ class Query:
         similarity = self._similarity(emb_query)
         res_inds = self._find_top_n_inds(similarity)
         sim_companies = self._return_top_n(res_inds)
-        if self.log_performance:
-            '''Find the number of results that are above 0.6 for each 15?'''
+        if self.evaluate:
+            #Find the number of "good scores"
             check = np.where(similarity > self.eval_threshold)
             num_good = len(check[0])
-            return sim_companies, num_good
+            #This is to check against different sentences
+            evaluator = EmbeddingSimilarityEvaluator(self.sentences1, self.sentences2, self.scores, write_csv= True)
+            score = evaluator(self.model)
+            return sim_companies, num_good, score
         else:
             return sim_companies

@@ -11,18 +11,27 @@ class ConfigData:
         ms = Settings()
         ms.configure()
         self.char_max = ms.char_max
+        self.word_max = ms.word_max
         self.data_path = ms.data_path
+        self.ignore_words = ms.ignore_words
         self.data = []
 
     def _trim_description(self, desc):
         '''This function takes in a sentence and trims it to fit our model'''
+        words = desc.split()
+        temp = [word for word in words if word not in self.ignore_words]
+        if len(temp) < self.word_max:
+            return " ".join(temp)
+        else:
+            return " ".join(temp[0:self.word_max])
+        '''   The below method puts limits on characters instead
         try:
             if len(desc) < self.char_max:
                 return desc
             else:
                 return desc[0:self.char_max]
         except:
-            return desc
+            return desc'''
         
     def _build_dict(self, name, desc):
         '''This function builds a dictionary of companies and the respective
