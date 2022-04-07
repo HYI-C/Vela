@@ -74,3 +74,9 @@ class Query:
             return sim_companies, num_good, score
         else:
             return sim_companies
+
+    def experiment(self, description):
+        emb_query = self._embed(description)
+        similarity = self._similarity(emb_query)
+        _, max_scores = self._find_top_n_inds(similarity)
+        return sum(max_scores)
