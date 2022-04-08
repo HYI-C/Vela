@@ -9,3 +9,4 @@ The dataset has 655k companies with short_description, description and associate
 
 ## Quickstart
 
+Please see the Sentence Similarity notebook
