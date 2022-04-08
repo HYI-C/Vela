@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  7 APR 2022 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.4.6)  8 APR 2022 14:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -320,32 +320,35 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 ) (./ison2022.sty) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 30.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 32.
  (./report.aux
 
-LaTeX Warning: Label `setup' multiply defined.
+LaTeX Warning: Label `cmanual' multiply defined.
+
+
+LaTeX Warning: Label `cmanual' multiply defined.
 
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -384,7 +387,7 @@ LaTeX Font Info:    ... okay on input line 30.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 30.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 32.
 \c@lstlisting=\count303
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -405,7 +408,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 32.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -415,74 +418,114 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count310
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
  (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./report.toc)
+)
+Overfull \hbox (3.03094pt too wide) in paragraph at lines 36--42
+\OT1/cmr/m/n/10 We used a BERT-based [[]1[]] em-bed-der to em-bed a dataset
+ []
+
+(./report.toc)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
+<datahead.png, id=68, 596.2275pt x 385.44pt>
+File: datahead.png Graphic file (type png)
+<use datahead.png>
+Package pdftex.def Info: datahead.png  used on input line 60.
+(pdftex.def)             Requested size: 241.84842pt x 156.34348pt.
 
-Overfull \hbox (19.64215pt too wide) in paragraph at lines 36--40
-\OT1/cmr/m/n/10 When there is a win-dow of op-por-tu-nity, smart en-trepreneurs
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (7.25325pt too wide) in paragraph at lines 88--98
+\OT1/cmr/m/n/10 pur-poses of demon-stra-tion we used the stock (pre-trained)
  []
-
-<uml.jpeg, id=29, 192.9609pt x 207.4149pt>
-File: uml.jpeg Graphic file (type jpg)
-<use uml.jpeg>
-Package pdftex.def Info: uml.jpeg  used on input line 47.
-(pdftex.def)             Requested size: 270.30118pt x 290.58142pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<training.jpeg, id=30, 139.9629pt x 213.9192pt>
-File: training.jpeg Graphic file (type jpg)
-<use training.jpeg>
-Package pdftex.def Info: training.jpeg  used on input line 53.
-(pdftex.def)             Requested size: 270.30118pt x 413.20093pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
- <./uml.jpeg>] [2
+ <./datahead.png>]
+<uml.jpeg, id=97, 192.9609pt x 207.4149pt>
+File: uml.jpeg Graphic file (type jpg)
+<use uml.jpeg>
+Package pdftex.def Info: uml.jpeg  used on input line 100.
+(pdftex.def)             Requested size: 270.30118pt x 290.58142pt.
 
- <./training.jpeg>] [3
+Overfull \hbox (0.47548pt too wide) in paragraph at lines 113--125
+\OT1/cmr/m/n/10 space of 768 di-men-sions (each company-description pair
+ []
 
+<output.png, id=104, 712.6625pt x 183.68625pt>
+File: output.png Graphic file (type png)
+<use output.png>
+Package pdftex.def Info: output.png  used on input line 147.
+(pdftex.def)             Requested size: 275.99173pt x 71.13562pt.
+[2 <./uml.jpeg> <./output.png>]
+<training.jpeg, id=117, 139.9629pt x 213.9192pt>
+File: training.jpeg Graphic file (type jpg)
+<use training.jpeg>
+Package pdftex.def Info: training.jpeg  used on input line 175.
+(pdftex.def)             Requested size: 270.30118pt x 413.20093pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--188
+
+ []
+
+[3 <./training.jpeg>] [4
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.cmanual}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.224 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.cmanual}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.224 \end{document}
+                    
 
 ] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: A99E5E4939396D4BDB48FF04C959884F;544.
+(rerunfilecheck)             Checksum: 13E548CBA8AA351099B8856FA9116FD2;1479.
  ) 
 Here is how much of TeX's memory you used:
- 15792 strings out of 478268
- 291602 string characters out of 5846348
- 739059 words of memory out of 5000000
- 33805 multiletter control sequences out of 15000+600000
- 477169 words of font info for 59 fonts, out of 8000000 for 9000
+ 16249 strings out of 478268
+ 295621 string characters out of 5846348
+ 754059 words of memory out of 5000000
+ 34244 multiletter control sequences out of 15000+600000
+ 477970 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,79p,372b,752s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (3 pages, 218944 bytes).
+ 71i,11n,79p,372b,1182s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on report.pdf (4 pages, 446022 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 185 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,6 +10,7 @@ class Query:
         embed_univ, # representation of the universe
         data, # the actual universe, name is in index 0, desc is index 1
         evaluate = True,
+        model = False,
     ):
         ms = Settings()
         ms.configure()
@@ -23,6 +24,8 @@ class Query:
         self.evaluate = evaluate
         self.model = SentenceTransformer(ms.model_name)
         self.sentences = []
+        if model:
+            self.model = model
 
     def _similarity(self, emb_query):
         '''This returns the similarity of each item in the universe'''

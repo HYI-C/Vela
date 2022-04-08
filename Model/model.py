@@ -9,12 +9,15 @@ class Model:
     def __init__(
         self,
         data,
+        model = None,
     ):
         ms = Settings()
         self.data = data
         self.model = SentenceTransformer(ms.model_name)
         self.sentences = []
-
+        if model:
+            self.model = model 
+            
     def _construct_sentences(self):
         for i in range(0, len(self.data)):
             self.sentences.append(self.data[i][1])
