@@ -5,6 +5,23 @@ from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
 from Settings.settings import *
 
 class Query:
+    '''This module embeds the query into representation space and searches the
+    rest of the representation space for the n most similar companies. There is
+    also an option to evaluate the performance of the model by seeing how many
+    of the n results are above a certain cosine similarity threshold, as well as
+    an option to use a custom model.
+    
+    Inputs: embedded universe, data from config_data Outputs: list of similar
+    companies and descriptions
+    
+    Example use: Stock model: Similar_companies = Query(embed_univ, data,
+    evaluate=True).run("INSERT DESCRIPTION OF COMPANY YOU WANT TO FIND SIMILAR
+    ONES TO")
+    
+    Custom model: Similar_companies = Query(embed_univ, data, evaluate=True,
+    model=[INSERT MODEL]).run("INSERT DESCRIPTION OF COMPANY YOU WANT TO FIND SIMILAR
+    ONES TO")'''
+
     def __init__(
         self,
         embed_univ, # representation of the universe
@@ -28,19 +45,19 @@ class Query:
             self.model = model
 
     def _similarity(self, emb_query):
-        '''This returns the similarity of each item in the universe'''
+        #This returns the similarity of each item in the universe
         similarity = util.pytorch_cos_sim(emb_query, self.emb_univ) 
         return similarity
     
     def _embed(self, item):
-        '''We embed the query item into representation space'''
+        #We embed the query item into representation space
         emb_query = self.model.encode(item, convert_to_tensor=True)
         #print(item)
         return emb_query
     
     def _find_top_n_inds(self, similarity): 
-        '''this function takes in the image data and returns the bins along with
-        the index of the bin where each point belongs'''
+        #This function takes in the image data and returns the bins along with
+        #the index of the bin where each point belongs
         res_inds = np.array([])
         max_scores = np.array([])
         sim_set = set(similarity[0])
@@ -55,7 +72,7 @@ class Query:
         return res_inds, max_scores
     
     def _return_top_n(self, res_inds):
-        '''Here, we return the top n companies'''
+        #Here, we return the top n companies
         sim_companies = []
         for idx in res_inds:
             sim_companies.append(self.data[idx])

@@ -9,6 +9,12 @@ ms.configure()
 import Settings
 
 class Experiment:
+    '''This module looks at the performance of the model for varying lengths of
+    description sentences, and logs performance vs. description length. Please
+    note that this module has never been run to completion.
+    
+    Example use:
+    num_words, score = Experiment.run()'''
     def __init__(
         self, 
     ):

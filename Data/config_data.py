@@ -3,8 +3,17 @@ from sklearn.model_selection import train_test_split
 from Settings.settings import *
 
 class ConfigData:
-    '''This creates a list of companies and their descriptions in a clean
-    format'''
+    '''This module takes the data in as a csv file and returns a list of
+    companies and their descriptions. It removes useless words as defined in the
+    settings file, and it also trims the descriptions to a set number of words.
+    
+    This module can be called in 3 different ways:
+    1. if we call module.run(), we configure the entire company universe
+    2. if we call module.run_IT(), we configure only IT companies
+    3. if we call module.run_test(), we configure the first 10k rows
+    
+    Example use: 
+    data = ConfigData().run()'''
     def __init__(
         self,
     ):
@@ -17,7 +26,7 @@ class ConfigData:
         self.data = []
 
     def _trim_description(self, desc):
-        '''This function takes in a sentence and trims it to fit our model'''
+        #This function takes in a sentence and trims it to fit our model
         words = desc.split()
         temp = [word for word in words if word not in self.ignore_words]
         if len(temp) < self.word_max:
@@ -34,8 +43,7 @@ class ConfigData:
             return desc'''
         
     def _build_dict(self, name, desc):
-        '''This function builds a dictionary of companies and the respective
-        descriptions'''
+        #This function builds a dictionary of companies and the respective descriptions
         self.data.append([name, desc])
 
     def run(self):
@@ -48,7 +56,7 @@ class ConfigData:
             self._build_dict(name, trimmed_desc)
         return self.data
 
-    def run_small(self):
+    def run_IT(self):
         '''Here, we only select the subgroup of IT companies, on short desc.'''
         df = pd.read_csv(self.data_path)
         df = df.drop(["uuid", "uuid_1"], axis=1)

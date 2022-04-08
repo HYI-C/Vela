@@ -8,6 +8,16 @@ from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
 from Settings.settings import *
 
 class TrainModel:
+    '''This module sets up and trains the custom 3 layer SBERT model. We
+    essentially add a fully connected neural network on top of the stock SBERT
+    model, which is then trained on specific data (pairs of sentences with
+    labelled similarity scores). After training, the module returns the
+    fine-tuned model (the trained dense layer).
+    
+    Inputs: pairs data from train_prep, number of epochs
+    Output: trained 3 layer model
+    
+    Example use: TrainModel(pairs_data).run(5)'''
     def __init__(
         self,    
         pairs,    
@@ -20,8 +30,6 @@ class TrainModel:
         self.pairs = pairs
 
     def _configure_model(self):
-        '''The architecture of this model is a pooling layer on top of the fully connected layer 
-        for dimension reduction.'''
         ms = Settings()
         self.emb_model = models.Transformer(ms.transformer_name, max_seq_length=ms.char_max)
         self.pooling_model = models.Pooling(self.emb_model.get_word_embedding_dimension())
@@ -30,7 +38,7 @@ class TrainModel:
         self.model = SentenceTransformer(modules=[self.emb_model, self.pooling_model, self.dense_model])
         return
     
-    def _input_data(self, pairs):
+    def _input_good_data(self, pairs):
         train_examples = []
         for i in range(0, len(pairs)):
             input_ = InputExample(texts = [pairs[i][1], pairs[i][3]], label = 0.99)
@@ -47,7 +55,7 @@ class TrainModel:
         
     def train(self, epochs):
         self._configure_model()
-        train_examples = self._input_data(self.pairs)
+        train_examples = self._input_good_data(self.pairs)
         train_dataloader, train_loss = self._configure_data(train_examples)
 
         self.model.fit(train_objectives=[(train_dataloader, train_loss)], epochs = epochs)
