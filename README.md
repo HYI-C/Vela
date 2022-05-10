@@ -8,7 +8,6 @@ When there is a window of opportunity, smart entrepreneurs all around the world 
 The dataset has 655k companies with short_description, description and associated categories.
 
 ## Quickstart
-# Spectroscopy data extraction algorithm
 
 ## Conda Environment
 
